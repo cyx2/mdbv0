@@ -1,8 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MongoDB v0
+
+An AI-powered tool that generates MongoDB application code from natural language descriptions. This tool enables users to quickly scaffold a new project by describing what they want to build, and receive a complete, runnable codebase that uses MongoDB for data persistence.
+
+## Features
+
+- **Prompt-Based Generation**: Describe your application in natural language
+- **MongoDB Integration**: All generated applications use MongoDB as their database
+- **Local Runnability**: Generated code is structured to run locally with minimal setup
+- **Deployment Preference Support**: Specify your preferred deployment method for tailored instructions
+- **Complete Application Structure**: Get a ready-to-use codebase with all necessary files
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.x or later
+- A Gemini API key (for AI code generation)
+
+### Installation
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/yourusername/mongodbv0.git
+cd mongodbv0
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Create a `.env.local` file based on the example:
+
+```bash
+cp .env.local.example .env.local
+```
+
+4. Edit the `.env.local` file and add your Gemini API key:
+
+```
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### Running the Application
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -10,24 +58,30 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to access the MongoDB v0 tool.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Use
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Enter a description of the application you want to build in the provided form
+2. Optionally specify your preferred deployment method
+3. Click "Generate MongoDB Application"
+4. Download the generated ZIP file
+5. Extract the ZIP file to your local machine
+6. Follow the instructions in the generated README.md to set up and run your application
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The MongoDB v0 tool itself can be deployed on Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fmongodbv0)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Remember to set the `GEMINI_API_KEY` environment variable in your Vercel project settings.
+
+## License
+
+[MIT](LICENSE)
 
 ## Deploy on Vercel
 
